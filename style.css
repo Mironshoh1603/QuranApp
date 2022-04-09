@@ -1,0 +1,74 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+  background-image: url(images/body-bg.png);
+  background-repeat: repeat;
+  background-size: cover;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(93, 93, 117);
+  padding: 0 2rem;
+  margin: 0.5rem 0;
+  border-radius: 1.3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 650;
+  color: rgb(7, 28, 42);
+}
+.admin {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.admin-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.admin-text {
+  margin-top: 0.5rem;
+}
+.link-admin {
+  color: inherit;
+}
+.align-center {
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 3rem;
+  background-color: rgb(93, 93, 117);
+}
+.inputs form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.inputs form label {
+  font-size: 2.5rem;
+  font-weight: 550;
+}
+.input {
+  border-style: none;
+  outline: none;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 255, 0.383);
+}
