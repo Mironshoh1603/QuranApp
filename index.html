@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -15,33 +17,69 @@
         <p class="admin-text">contact admin</p>
         <a href="https://github.com/Mironshoh1603" class="link-admin"><ion-icon class="admin-icon" name="person-circle-outline"></ion-icon></div></a>
     </header>
-    <div class="inputs">
-      <form action="get_suraname">
-        <label for="">SuraName</label>
-        <select name="" id="" class="input input_sura">
-          <option value="1">Al-fatiha</option>
-        </select>
-      </form>
-      <form action="get_reciter">
-        <label for="">Reciter</label>
-        <select name="" id="" class="input input_reciter">
-          <option value="1">Mishary-Rashid</option>
-        </select>
-      </form>
-      <form action="get_translation">
-        <label for="">Translation</label>
-        <select name="" id="" class="input input_translate">
-          <option value="1">Uzbek</option>
-        </select>
-      </form>
-      <button class="Send"><ion-icon name="search-circle-outline"></ion-icon></button>
+    <main>
+      <aside class="suraNames">
+        <h1 class="heading-primary">Quran Suras</h1>
+        <div class="suraname">
+          
+        </div>
+      </aside>
+      <div class="Quran-text">  
+      <div class="inputs">
+      
+        <form action="get_reciter">
+          <label for="">Reciter</label>
+          <select name="" id="" class="input input_reciter">
+            <option value="1">Mishary-Rashid</option>
+          </select>
+        </form>
+        <form action="get_translation">
+          <label for="">Translation</label>
+          <select name="" id="" class="input input_translate">
+            <option value="1">Uzbek</option>
+          </select>
+        </form>
+          
+      </div>
+
+      <section class="ayats">
+        <h2 class="heading-secondary">AyatName</h2>
+        <div class="ayat-text">
+          <div class="translation-section">
+            
+          </div>
+        <div class="real-section">
+          
+        </div>
+        </div>
         
-    </div>
-    <section class="ayats">
-      <div class="translation-section"></div>
-      <div class="real-section"></div>
-    </section>
-    <div class="player"></div>
+      </section>
+      <div class="player">
+    
+        <div class="container">  
+            
+            <img src="images/pause.png" onclick="playPause()" id="play-pause" />
+            <img src="images/forward.png" onclick="nextSong()" id="next-song" />
+            <img src="images/backward.png" onclick="previousSong()" id="previous-song" />
+    
+            <div class="song-artist">Beyonce</div>
+            <div class="song-title">Don't Hurt Yourself</div>
+    
+            
+            <input 
+                type="range" 
+                id="progress-bar" 
+                min="0" 
+                max="" 
+                value="0" 
+                onchange="changeProgressBar()"
+            />
+    
+            <div class="currentTime"></div>
+            <div class="durationTime"></div>
+        </div>
+      </div></div>
+</main>
   </body>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

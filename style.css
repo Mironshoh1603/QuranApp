@@ -1,3 +1,10 @@
+:root {
+  --color-back: #143f6b;
+  --color-text: #f55353;
+  --color-border: #feb139;
+  --color-again: #f6f54d;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -11,11 +18,11 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 96vw;
   margin: 0 auto;
   background-image: url(images/body-bg.png);
   background-repeat: repeat;
-  background-size: cover;
+  background-size: 10%;
 }
 header {
   display: flex;
@@ -57,10 +64,9 @@ header {
 }
 .inputs form {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 .inputs form label {
   font-size: 2.5rem;
@@ -71,4 +77,334 @@ header {
   outline: none;
   padding: 0.5rem;
   background-color: rgba(0, 0, 255, 0.383);
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+aside {
+  width: 25%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5rem;
+  padding: 2rem 0.5rem;
+  background-color: rgb(93, 93, 117);
+}
+.heading-primary {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.Quran-text {
+  width: 75%;
+}
+.suraname {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  position: sticky;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.suraname::-webkit-scrollbar,
+.translation-section::-webkit-scrollbar,
+.real-section::-webkit-scrollbar {
+  width: 5px;
+}
+.suraname::-webkit-scrollbar-thumb,
+.translation-section::-webkit-scrollbar-thumb,
+.real-section::-webkit-scrollbar-thumb {
+  background: black;
+}
+.suraname::-webkit-scrollbar-track,
+.translation-section.suraname::-webkit-scrollbar-track,
+.real-section::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, rgb(132, 129, 129) 0%, gray 100%);
+}
+.sura {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin: 0.5rem 1rem;
+  margin-right: 20px;
+
+  border-radius: 1rem;
+  background-color: grey;
+}
+.suraLeft {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.suraLeftText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.suraNumber {
+  background-color: #b3d4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  transform: rotate(45deg);
+  -webkit-margin-end: 2rem;
+  margin-inline-end: 2rem;
+}
+.numbervalue {
+  transform: rotate(-45deg);
+  font-weight: 600;
+}
+.suranametext,
+.suratype {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.suratype {
+  font-size: 1.2rem;
+}
+.suraRight {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.ayats {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0.5rem 0 0;
+  background-color: rgb(93, 93, 117);
+}
+.heading-secondary {
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.ayat-text {
+  display: flex;
+  width: 100%;
+  padding: 1rem 1rem;
+  justify-content: center;
+  gap: 1rem;
+}
+.translation-section {
+  background-color: grey;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  overflow-y: scroll;
+
+  letter-spacing: 1.5;
+  font-size: 4rem;
+  width: 50%;
+  overflow-x: hidden;
+  height: 78vh;
+}
+.real-section {
+  height: 78vh;
+  overflow-x: hidden;
+
+  overflow-y: scroll;
+  font-size: 4rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  background-color: rgb(38, 11, 154);
+  width: 50%;
+  text-align: right;
+  letter-spacing: 1.5;
+}
+.background-blue {
+  background-color: rgb(49, 49, 146);
+}
+.player {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
+/*     */
+
+/* container for music player */
+.container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000000;
+}
+
+/* container for play, pause, previous track, next track, and progress bar  */
+.box {
+  height: 50%;
+  width: 103%;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(40, 40, 40),
+    rgb(133, 133, 133)
+  );
+  bottom: -17%;
+}
+
+/* album cover */
+#thumbnail {
+  position: absolute;
+  width: 103%;
+  top: -7%;
+  transition: 1s;
+  z-index: 3;
+}
+
+/* track artist */
+.song-artist {
+  position: absolute;
+  z-index: 4;
+  color: rgb(193, 255, 6);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  bottom: 8.5rem;
+  left: 74rem;
+}
+
+/* track title */
+.song-title {
+  position: absolute;
+  z-index: 4;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  bottom: 4.5rem;
+  left: 74rem;
+}
+
+/* style for play and pause images */
+#play-pause {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+  cursor: pointer;
+  bottom: 15%;
+  z-index: 4;
+  font-size: 53px;
+  left: 100px;
+  bottom: 50px;
+}
+
+/* style for next and previous song images */
+#next-song,
+#previous-song {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  filter: invert(1);
+  cursor: pointer;
+  bottom: 6.5rem;
+  font-size: 40px;
+  z-index: 4;
+}
+
+/* unique style for next song image */
+#next-song {
+  right: 5rem;
+}
+
+/* unique style for previous song image */
+#previous-song {
+  right: 10rem;
+}
+
+/* style for current time of the track */
+.currentTime {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  bottom: -7.5%;
+  left: 17%;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: white;
+  align-items: center;
+}
+
+/* style for the total length of the track */
+.durationTime {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  bottom: -1%;
+  right: 11%;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  align-items: center;
+  color: rgb(193, 255, 6);
+}
+
+/* style for the progress bar */
+#progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  z-index: 4;
+  height: 5px;
+  background: #000000;
+  width: 55rem;
+  bottom: 7rem;
+  border-radius: 30px;
+  left: 17rem;
+}
+
+/* style for the progress bar's slider thumb */
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 10px;
+  width: 7px;
+  border: 0;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(213, 213, 213),
+    rgb(193, 255, 6)
+  );
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* style for the progress bar's runnable track */
+#progress-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  max-height: 5px;
+  border-radius: 30px;
+}
+
+/* style to remove blue shade of the progress bar when clicked on/selected */
+#progress-bar:focus {
+  outline: none;
 }
